@@ -1,0 +1,102 @@
+.minicart {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .4);
+  z-index: 9;
+  display: flex;
+  align-items: flex-start;
+  justify-content: right;
+  gap: 10px;
+  transition: .8s linear;
+}
+
+.minicartContainer {
+  background: #FFF;
+  width: 100%;
+  max-width: 300px;
+  height: 100vh;
+  padding: 15px;
+}
+
+.minicartClose {
+  margin-top: 10px;
+  background: #FFF;
+  border: none;
+  border-radius: 2px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.minicartTitle {
+  font-size: 16px;
+  line-height: 34px;
+  color: #231F20;
+  font-weight: 600;
+}
+
+.minicartGrid {
+  display: grid;
+  height: calc(100% - 49px);
+}
+
+.minicartBottom {
+  align-self: end;
+}
+
+.minicartFinish {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  background: #231F20;
+  border: none;
+  color: #FFF;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 16px 24px;
+  width: 100%;
+  cursor: pointer;
+  transition: .2s linear;
+  display: block;
+  text-align: center;
+}
+@media(min-width: 768px) {
+  .minicartFinish:hover, .minicartContinue:hover {
+    opacity: .8;
+  }
+}
+
+.minicartContinue {
+  margin-top: 10px;
+  background: #FFF;
+  border: none;
+  color: #231F20;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 16px 24px;
+  width: 100%;
+  cursor: pointer;
+  transition: .2s linear;
+  display: block;
+  text-align: center;
+}
+
+.minicartTotal {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #231F20;
+  font-weight: 600;
+}
