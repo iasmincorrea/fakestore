@@ -1,0 +1,29 @@
+.itemQuantity {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.quantityInput {
+  font-size: 14px;
+  color: rgba(154, 154, 154, 1);
+  font-weight: 400;
+  background: none;
+  border: none;
+  height: 20px;
+  max-width: 25px;
+  text-align: center;
+  padding: 0;
+}
+
+.quantityButtons {
+  display: flex;
+  flex-direction: column;
+}
+
+.quantityButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}

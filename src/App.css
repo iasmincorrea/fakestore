@@ -42,3 +42,13 @@ a {
   padding: 0 15px;
   margin: 0 auto;
 }
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh + 150px);
+}
+
+.appBody {
+  flex: 1;
+}

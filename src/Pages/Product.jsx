@@ -1,32 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import useFetch from '../Hooks/useFetch';
-import { PRODUCT_GET } from '../api';
-import Error from '../Components/Helper/Error';
-import Loading from '../Components/Helper/Loading';
-import Head from '../Components/Header/Head';
+
 import styles from './Product.module.css';
 import cartImage from '../Assets/cart.svg';
-import ProductRating from '../Components/Product/ProductRating';
-import Minicart from '../Components/Product/Minicart';
 
-const Product = () => {
+import useFetch from '../Hooks/useFetch';
+import { PRODUCT_GET } from '../api';
+
+import Head from '../Components/Header/Head';
+import Error from '../Components/Helper/Error';
+import Loading from '../Components/Helper/Loading';
+import ProductRating from '../Components/Product/ProductRating';
+
+const Product = ({ openModal, addToCart }) => {
   const { id } = useParams();
   const { data, loading, error, request } = useFetch();
-  const [isMinicartOpen, setMinicartOpen] = React.useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const { url, options } = PRODUCT_GET(id);
     request(url, options);
   }, [request, id]);
-
-  const openModal = () => {
-    setMinicartOpen(true);
-  };
-
-  const closeModal = () => {
-    setMinicartOpen(false);
-  };
 
   if (error) return <Error />;
   if (loading) return <Loading />;
@@ -47,9 +40,17 @@ const Product = () => {
 
             <ProductRating rating={data.rating} />
 
-            <p className={styles.productPrice}>R$ {data.price}</p>
+            <p className={styles.productPrice}>
+              R$ {data.price.toLocaleString('pt-BR')}
+            </p>
 
-            <button className={styles.productButton} onClick={openModal}>
+            <button
+              className={styles.productButton}
+              onClick={() => {
+                addToCart(data);
+                openModal();
+              }}
+            >
               <img src={cartImage} alt="Ícone de carrinho" /> Adicionar ao
               carrinho
             </button>
@@ -60,7 +61,6 @@ const Product = () => {
             </div>
           </div>
         </div>
-        {isMinicartOpen && <Minicart onClose={closeModal} />}
       </section>
     );
   else return null;

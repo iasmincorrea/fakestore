@@ -1,7 +1,7 @@
 .minicart {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, .4);
@@ -9,20 +9,19 @@
   display: flex;
   align-items: flex-start;
   justify-content: right;
-  gap: 10px;
-  transition: .8s linear;
+  gap: 8px;
+  transition: .2s linear;
 }
 
 .minicartContainer {
   background: #FFF;
-  width: 100%;
+  width: 78%;
   max-width: 300px;
   height: 100vh;
-  padding: 15px;
 }
 
 .minicartClose {
-  margin-top: 10px;
+  margin-top: 8px;
   background: #FFF;
   border: none;
   border-radius: 2px;
@@ -39,20 +38,38 @@
   line-height: 34px;
   color: #231F20;
   font-weight: 600;
+  padding: 16px;
 }
 
 .minicartGrid {
   display: grid;
-  height: calc(100% - 49px);
+  height: calc(100% - 66px);
+}
+
+.minicartItems {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.minicartItems::-webkit-scrollbar-thumb {
+  background: #231F20;
+}
+
+.minicartItems::-webkit-scrollbar {
+  width: 2px;
+  background: #f4f4f4;
 }
 
 .minicartBottom {
   align-self: end;
+  margin: 16px;
 }
 
 .minicartFinish {
-  margin-top: 30px;
-  margin-bottom: 10px;
+  margin-top: 16px;
+  margin-bottom: 24px;
   background: #231F20;
   border: none;
   color: #FFF;
@@ -73,14 +90,13 @@
 }
 
 .minicartContinue {
-  margin-top: 10px;
+  margin-top: 24px;
   background: #FFF;
   border: none;
   color: #231F20;
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 400;
-  padding: 16px 24px;
   width: 100%;
   cursor: pointer;
   transition: .2s linear;
@@ -89,8 +105,7 @@
 }
 
 .minicartTotal {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 16px;
   border-top: 1px solid #DDDDDD;
   border-bottom: 1px solid #DDDDDD;
   display: flex;
@@ -99,4 +114,21 @@
   font-size: 16px;
   color: #231F20;
   font-weight: 600;
+}
+
+.cartEmpty {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  height: 100vh;
+}
+
+.emptyText {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600;
+  color: rgba(35, 31, 32, 1);
 }
