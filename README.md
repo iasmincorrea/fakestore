@@ -17,5 +17,3 @@ Fake Store é uma página de detalhes do produto (PDP) utilizando a API https://
 - Vite
 
 ## 💻 Projeto
-
-- [Visite o projeto online]()
