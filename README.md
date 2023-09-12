@@ -3,7 +3,7 @@
 <br>
 
 <p align="center">
-Fake Store é uma loja que utiliza a API https://fakestoreapi.com, contendo apenas a home e página do produto.
+Fake Store é uma loja que utiliza a API https://fakestoreapi.com, contendo apenas a home, página do produto e minicart.
 </p>
 
 ## 🚀 Tecnologias
