@@ -12,7 +12,7 @@ Fake Store é uma loja que utiliza a API https://fakestoreapi.com, contendo apen
 - JavaScript/JSX
 - Vite
 
-## 💻 Instalação
+## 🛠 Instalação
 
 - Fazer donwload do código
 - Descompactar e abrir no editor de códigos
@@ -28,3 +28,8 @@ Fake Store é uma loja que utiliza a API https://fakestoreapi.com, contendo apen
 - Remover produto do carrinho
 - Alterar a quantidade do produto
 - Visualizar o total do carrinho
+
+<div align="left">
+<img width="49%" height="250px" src="https://i.imgur.com/foGuCHn.png"/>
+<img width="49%" height="250px" src="https://i.imgur.com/ClJCtsr.png"/>
+</div>
