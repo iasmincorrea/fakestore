@@ -30,6 +30,6 @@ Fake Store é uma loja que utiliza a API https://fakestoreapi.com, contendo apen
 - Visualizar o total do carrinho
 
 <div align="left">
-<img width="49%" height="250px" src="https://i.imgur.com/foGuCHn.png"/>
-<img width="49%" height="250px" src="https://i.imgur.com/ClJCtsr.png"/>
+<img width="49%" height="240px" src="https://i.imgur.com/foGuCHn.png"/>
+<img width="49%" height="240px" src="https://i.imgur.com/ClJCtsr.png"/>
 </div>
