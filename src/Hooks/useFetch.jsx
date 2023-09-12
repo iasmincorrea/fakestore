@@ -16,10 +16,10 @@ const useFetch = () => {
       response = await fetch(url, options);
       json = await response.json();
 
-      if (response.ok === false) throw new Error(json.message);
+      if (response.ok === false) throw new Error('Erro na requisição à API');
     } catch (err) {
-      json = null;
-      setError(err.message);
+      const errorMessage = err.message || 'Erro desconhecido';
+      setError(errorMessage);
     } finally {
       setData(json);
       setLoading(false);

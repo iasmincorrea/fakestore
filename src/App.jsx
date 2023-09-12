@@ -9,6 +9,7 @@ import Footer from './Components/Footer/Footer';
 import Minicart from './Components/Minicart/Minicart';
 
 import { useCart } from './Hooks/useCart';
+import Home from './Pages/Home';
 
 const App = () => {
   const {
@@ -27,6 +28,7 @@ const App = () => {
         <Header openModal={openModal} />
         <main className="appBody container">
           <Routes>
+            <Route path="/" element={<Home />} />
             <Route
               path="/produto/:id"
               element={<Product openModal={openModal} addToCart={addToCart} />}

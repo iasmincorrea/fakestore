@@ -1,0 +1,40 @@
+.spot {
+  box-shadow: 0px 4px 8px 0px rgba(133, 133, 133, 0.15);
+  padding: 8px;
+}
+
+.spotImage {
+  width: 100%;
+  object-fit: contain;
+}
+@media(min-width: 768px) {
+  .spotImage {
+    height: 280px;
+  }
+}
+@media(max-width: 767px) {
+  .spotImage {
+    height: 160px;
+  }
+}
+
+.spotTitle {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  margin: 16px 0;
+  font-family: var(--type-second);
+  color: #505050;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.spotPrice {
+  font-size: 24px;
+  font-weight: 700;
+  color: rgba(80, 80, 80, 1);
+  font-weight: 700;
+}

@@ -1,0 +1,29 @@
+@media(min-width: 768px) {
+  .showcase {
+    margin: 60px 0;
+  }
+}
+@media(max-width: 767px) {
+  .showcase {
+    margin: 30px 0;
+  }
+}
+
+.title {
+  color: #505050;
+  font-weight: 400;
+  text-align: center;
+}
+
+@media(min-width: 768px) {
+  .title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+}
+@media(max-width: 767px) {
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
