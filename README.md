@@ -16,4 +16,9 @@ Fake Store é uma página de detalhes do produto (PDP) utilizando a API https://
 - JavaScript/JSX
 - Vite
 
-## 💻 Projeto
+## 💻 Instalação
+
+- Fazer donwload do código
+- Descompactar e abrir no editor de códigos
+- No terminal: npm install
+- Para acessar um produto: ../produto/id (id de sua preferência podendo ser até o nª 20 conforme disponibilizado na api)
