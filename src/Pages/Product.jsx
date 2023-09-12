@@ -15,6 +15,7 @@ import ProductRating from '../Components/Product/ProductRating';
 const Product = ({ openModal, addToCart }) => {
   const { id } = useParams();
   const { data, loading, error, request } = useFetch();
+  const { title, image, rating, description, price } = data || {};
 
   useEffect(() => {
     const { url, options } = PRODUCT_GET(id);
@@ -25,23 +26,19 @@ const Product = ({ openModal, addToCart }) => {
   if (loading) return <Loading />;
   if (data)
     return (
-      <section className="product">
-        <Head title={data.title} description={data.description} />
+      <section>
+        <Head title={title} description={description} />
         <div className={styles.productContainer}>
           <div className={styles.productColumn}>
-            <img
-              className={styles.productImage}
-              src={data.image}
-              alt={data.title}
-            />
+            <img className={styles.productImage} src={image} alt={title} />
           </div>
           <div className={styles.productInformation}>
-            <h1 className={styles.productTitle}>{data.title}</h1>
+            <h1 className={styles.productTitle}>{title}</h1>
 
-            <ProductRating rating={data.rating} />
+            <ProductRating rating={rating} />
 
             <p className={styles.productPrice}>
-              R$ {data.price.toLocaleString('pt-BR')}
+              R$ {price.toLocaleString('pt-BR')}
             </p>
 
             <button
@@ -51,13 +48,13 @@ const Product = ({ openModal, addToCart }) => {
                 openModal();
               }}
             >
-              <img src={cartImage} alt="Ícone de carrinho" /> Adicionar ao
-              carrinho
+              <img src={cartImage} alt="Ícone de carrinho" />
+              Adicionar ao carrinho
             </button>
 
             <div className={styles.productDescription}>
               <h2 className={styles.descriptionTitle}>Descrição</h2>
-              <p className={styles.descriptionText}>{data.description}</p>
+              <p className={styles.descriptionText}>{description}</p>
             </div>
           </div>
         </div>

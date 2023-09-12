@@ -3,6 +3,7 @@ import styles from './Minicart.module.css';
 import { Link } from 'react-router-dom';
 import Close from '../../Assets/close.svg';
 import MinicartItem from './MinicartItem';
+import MinicartEmpty from './MinicartEmpty';
 
 const Minicart = ({
   onClose,
@@ -61,12 +62,7 @@ const Minicart = ({
             </div>
           </>
         ) : (
-          <div className={styles.cartEmpty}>
-            <p className={styles.emptyText}>Seu carrinho está vazio</p>
-            <button className={styles.minicartFinish} onClick={onClose}>
-              Continuar comprando
-            </button>
-          </div>
+          <MinicartEmpty onClose={onClose} />
         )}
       </div>
     </section>
