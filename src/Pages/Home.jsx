@@ -15,7 +15,7 @@ const Home = () => {
     request(url, options);
   }, [request]);
 
-  if (error) return <Error />;
+  if (error) return <Error error={error} />;
   if (loading) return <Loading />;
   if (data)
     return (

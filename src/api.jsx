@@ -1,4 +1,4 @@
-export const API_URL = 'https://fakestoreapi.com/products';
+export const API_URL = 'https://fakestoreapi.com/products/';
 
 export function PRODUCT_GET(id) {
   return {

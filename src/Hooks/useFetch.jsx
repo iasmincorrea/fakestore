@@ -16,7 +16,9 @@ const useFetch = () => {
       response = await fetch(url, options);
       json = await response.json();
 
-      if (response.ok === false) throw new Error('Erro na requisição à API');
+      if (!response.ok) {
+        throw new Error('Erro na requisição à API');
+      }
     } catch (err) {
       const errorMessage = err.message || 'Erro desconhecido';
       setError(errorMessage);

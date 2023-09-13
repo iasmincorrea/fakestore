@@ -22,7 +22,7 @@ const Product = ({ openModal, addToCart }) => {
     request(url, options);
   }, [request, id]);
 
-  if (error) return <Error />;
+  if (error) return <Error error={error} />;
   if (loading) return <Loading />;
   if (data)
     return (
