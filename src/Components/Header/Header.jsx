@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
 import styles from './Header.module.css';
 
 import Logo from '../../Assets/logo.png';
@@ -8,8 +7,17 @@ import Cart from '../../Assets/cartHeader.svg';
 import MenuToggle from '../../Assets/MenuToggle.svg';
 import Close from '../../Assets/close.svg';
 
+const MenuItems = [
+  { text: 'Item 01', link: '/' },
+  { text: 'Item 02', link: '/' },
+  { text: 'Item 03', link: '/' },
+  { text: 'Item 04', link: '/' },
+  { text: 'Item 05', link: '/' },
+  { text: 'Item 06', link: '/' },
+];
+
 const Header = ({ openModal }) => {
-  const [isMenuOpen, setMenuOpen] = React.useState(false);
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -38,44 +46,16 @@ const Header = ({ openModal }) => {
         </Link>
 
         <ul className={`${styles.menu} ${isMenuOpen ? styles.open : ''}`}>
-          <li className={styles.menuItem}>
-            <Link className={styles.menuLink} to="/">
-              Item 01
-            </Link>
-          </li>
-          <li className={styles.menuItem}>
-            <Link className={styles.menuLink} to="/">
-              Item 02
-            </Link>
-          </li>
-          <li className={styles.menuItem}>
-            <Link className={styles.menuLink} to="/">
-              Item 03
-            </Link>
-          </li>
-          <li className={styles.menuItem}>
-            <Link className={styles.menuLink} to="/">
-              Item 04
-            </Link>
-          </li>
-          <li className={styles.menuItem}>
-            <Link className={styles.menuLink} to="/">
-              Item 05
-            </Link>
-          </li>
-          <li className={styles.menuItem}>
-            <Link className={styles.menuLink} to="/">
-              Item 06
-            </Link>
-          </li>
+          {MenuItems.map(({ link, text }, index) => (
+            <li className={styles.menuItem} key={index}>
+              <Link className={styles.menuLink} to={link}>
+                {text}
+              </Link>
+            </li>
+          ))}
         </ul>
 
-        <button
-          className={styles.cart}
-          onClick={() => {
-            openModal();
-          }}
-        >
+        <button className={styles.cart} onClick={() => openModal()}>
           <img
             src={Cart}
             alt="Ícone do carrinho"
