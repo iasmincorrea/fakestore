@@ -9,3 +9,13 @@ export function PRODUCT_GET(id) {
     },
   };
 }
+
+export function PRODUCTS_GET() {
+  return {
+    url: `${API_URL}`,
+    options: {
+      method: 'GET',
+      cache: 'no-store',
+    },
+  };
+}

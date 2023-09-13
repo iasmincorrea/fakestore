@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 
 import styles from './Product.module.css';
@@ -17,7 +17,7 @@ const Product = ({ openModal, addToCart }) => {
   const { data, loading, error, request } = useFetch();
   const { title, image, rating, description, price } = data || {};
 
-  useEffect(() => {
+  React.useEffect(() => {
     const { url, options } = PRODUCT_GET(id);
     request(url, options);
   }, [request, id]);

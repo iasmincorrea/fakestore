@@ -5,13 +5,14 @@ import Showcase from '../Components/Showcase/Showcase';
 import Error from '../Components/Helper/Error';
 import Loading from '../Components/Helper/Loading';
 import useFetch from '../Hooks/useFetch';
-import { API_URL } from '../api';
+import { PRODUCTS_GET } from '../api';
 
 const Home = () => {
   const { data, loading, error, request } = useFetch();
 
   React.useEffect(() => {
-    request(API_URL);
+    const { url, options } = PRODUCTS_GET();
+    request(url, options);
   }, [request]);
 
   if (error) return <Error />;

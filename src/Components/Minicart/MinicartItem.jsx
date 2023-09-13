@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './MinicartItem.module.css';
 import Delete from '../../Assets/delete.svg';
 import MinicartQuantity from './MinicartQuantity';

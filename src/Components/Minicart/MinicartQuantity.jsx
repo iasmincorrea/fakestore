@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './MinicartQuantity.module.css';
 import ArrowPlus from '../../Assets/ArrowPlus.svg';
 import ArrowLess from '../../Assets/ArrowLess.svg';

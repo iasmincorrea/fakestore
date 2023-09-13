@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import styles from './Header.module.css';
@@ -9,7 +9,7 @@ import MenuToggle from '../../Assets/MenuToggle.svg';
 import Close from '../../Assets/close.svg';
 
 const Header = ({ openModal }) => {
-  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isMenuOpen, setMenuOpen] = React.useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);

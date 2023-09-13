@@ -1,17 +1,17 @@
-import { useState, useEffect } from 'react';
+import React from 'react';
 
 export const useCart = () => {
-  const [isMinicartOpen, setMinicartOpen] = useState(false);
-  const [cartItems, setCartItems] = useState([]);
-  const [cartItemsInStorage, setCartItemsInStorage] = useState([]);
+  const [isMinicartOpen, setMinicartOpen] = React.useState(false);
+  const [cartItems, setCartItems] = React.useState([]);
+  const [cartItemsInStorage, setCartItemsInStorage] = React.useState([]);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
     setCartItemsInStorage(storedCart);
     setCartItems(storedCart);
   }, []);
 
-  useEffect(() => {
+  React.useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cartItemsInStorage));
   }, [cartItemsInStorage]);
 
