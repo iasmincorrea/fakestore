@@ -25,7 +25,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <BrowserRouter>
+      <BrowserRouter basename="/fakestore">
         <Header openModal={openModal} />
         <main className="appBody container">
           <Routes>
