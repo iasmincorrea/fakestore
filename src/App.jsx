@@ -10,6 +10,7 @@ import Minicart from './Components/Minicart/Minicart';
 
 import { useCart } from './Hooks/useCart';
 import Home from './Pages/Home';
+import NotFound from './Components/NotFound/NotFound';
 
 const App = () => {
   const {
@@ -33,6 +34,7 @@ const App = () => {
               path="/produto/:id"
               element={<Product openModal={openModal} addToCart={addToCart} />}
             />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
